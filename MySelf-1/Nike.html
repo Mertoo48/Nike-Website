@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Offical Website</title>
+    <link rel="icon" href="./Images/image-1.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Nike.html" id="home">Ana Sayfa</a></li>
+            <h1>NIKE</h1>
+            <li><a href="/More.html">Daha Fazla</a></li>
+        </ul>
+    </nav>
+    <!-- Best-Price-Shoe Intro-->
+    <h2>GERİ SAYIM</h2>
+    <p id="demo"></p>
+    <div class="best-price-shoe">
+    <div class="bigsquare"></div>
+    <div class="square"></div>
+    <div class="small-square"></div>
+    <div class="circle"></div>
+    <p id="Best-Price-Text">UYGUN FİYAT</p>
+    <p id="first-price">599.99 TL</p>
+    <p id="second-price">499.99 TL</p>
+    <li><img src="./Images/shoe-2.png" alt="shoe-2" id="Shoe-2"></li>
+    <!-- Best-Price-Shoe Info-->
+    <div class="p-square"></div>
+    <div class="Info"><p id="Best-Price-Shoe-Info">Eylül ayının ilk gününe kadar olan sınırlı indirimi sakın kaçırma !</p></div>   
+    </div>
+
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("September 1, 2023 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "g " + hours + "s "
+    + minutes + "d " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+    </script>
+</body>
+</html>
